@@ -9,42 +9,31 @@
   <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
 </p>
 
-<p align="center"><em>⚡ Optimización de compute/tokens.</em></p>
-
----
-
 ## Overview
-Optimizador de consumo que estima coste/token antes de ejecutar, aplica caching semántico, truncado inteligente y compresión de contexto para ahorrar 30-60% en workloads recurrentes.
+Token/time optimizer with pre-run estimation and adaptive cost controls.
 
-## Architecture of understanding
-```mermaid
-flowchart LR
-  A[Input goal] --> B[Scope check]
-  B --> C[Plan minimal steps]
-  C --> D[Execute safely]
-  D --> E[Verify outcomes]
-  E --> F[Report + next steps]
-```
+## Purpose
+Optimizador de compute: predice costo tokens/tiempo antes de ejecutar chains largas, propone shortcuts y pausa si excede presupuesto.
 
 ## Installation
 ```bash
 git clone https://github.com/smouj/Flux-Capacitor.git
 cd Flux-Capacitor
-# read the contract
 cat SKILL.md
 ```
 
-## Quick usage
-```bash
-# Example placeholder command
-printf "running flux-capacitor...\n"
+## Architecture (understanding)
+```mermaid
+flowchart LR
+  A[Input] --> B[Validate scope]
+  B --> C[Plan safe steps]
+  C --> D[Execute]
+  D --> E[Verify]
+  E --> F[Report]
 ```
 
-## Badges
-- Status: Initiating
-- Difficulty: Media-Alta
+## Status
+Initiating
 
-## Roadmap
-- [ ] Implement core logic v0
-- [ ] Add integration tests
-- [ ] Publish stable tag v1.0.0
+## Difficulty
+Media-Alta
