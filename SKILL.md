@@ -1,59 +1,45 @@
 ---
-name: flux-capacitor
-description: "⚡ Optimización de compute/tokens."
+name: Flux Capacitor
+description: "⚡ Token/time optimizer with pre-run estimation and adaptive cost controls."
+when: "When a user request matches flux-capacitor capabilities or requires this domain-specific workflow."
+examples:
+  - "Run Flux Capacitor for this task"
+  - "Apply Flux Capacitor to solve this workflow"
 metadata:
-  {
-    "openclaw": {
-      "emoji": "⚡",
-      "version": "0.2.0",
-      "author": "smouj",
-      "lang_default": "en"
-    }
-  }
+  openclaw:
+    requires: ["fs_read", "fs_write", "shell_exec", "memory_search"]
+  safety_level: high
+  version: "1.0.0"
+  author: "smouj"
+  tags: ["flux-capacitor", "automation", "openclaw-skill"]
 ---
 
 # ⚡ Flux Capacitor
 
 ## Purpose
-Optimizador de consumo que estima coste/token antes de ejecutar, aplica caching semántico, truncado inteligente y compresión de contexto para ahorrar 30-60% en workloads recurrentes.
+Optimizador de compute: predice costo tokens/tiempo antes de ejecutar chains largas, propone shortcuts y pausa si excede presupuesto.
 
-## Tags
-- security
-- reliability
-- automation
-- openclaw-skill
+## How to Use / Core Instructions
+1. Primero piensa en alcance, riesgo y coste.
+2. Luego valida inputs y dependencias mínimas.
+3. Ejecuta en pasos pequeños y reversibles.
+4. Verifica resultado con checks explícitos.
+5. Si hay error, falla seguro y reporta causa + próximo paso.
 
-## Execution contract
-1. Validate request and constraints.
-2. Generate minimal safe plan.
-3. Execute in reversible steps.
-4. Verify with explicit checks.
-5. Return concise summary + next actions.
+## Security & Safety Guidelines
+Nunca ejecutes código sospechoso sin sandbox. Reporta riesgos al usuario. No envíes datos sensibles fuera del entorno local.
 
-## Inputs expected
-- Goal
-- Constraints (time/cost/privacy)
-- Optional files/URLs
+## Tools Required
+- fs_read
+- fs_write
+- shell_exec
+- memory_search
 
-## Outputs
-- Plan
-- Actions executed
-- Verification results
-- Rollback notes
+## Example Flows
+- Entrada -> validación -> plan -> ejecución -> verificación -> reporte.
+- Reintento controlado con rollback si falla.
 
-## Guardrails
-- Never expose secrets.
-- No destructive operation without explicit confirmation.
-- Fail safe with actionable diagnostics.
-
-## Commands
-```bash
-# Placeholder entrypoint
-printf "flux-capacitor: validate -> execute -> verify\n"
-```
-
-## Test checklist
-- [ ] Happy path
-- [ ] Error handling
-- [ ] Idempotency
-- [ ] Guardrails respected
+## Edge Cases & Error Handling
+- Input incompleto: pedir datos mínimos.
+- Dependencia ausente: degradar en modo seguro.
+- Error persistente: detener, registrar y escalar.
