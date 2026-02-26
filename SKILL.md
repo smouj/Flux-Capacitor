@@ -2,7 +2,7 @@
 name: flux-capacitor
 description: >
   Flux Capacitor skill for optimization operations in multi-agent ecosystems. Use when tasks require optimization analysis, automation, and safe execution workflows.
-version: "1.0.0"
+version: "1.0.1"
 tags: [optimization, ai-agents, openclaw]
 metadata:
   author: smouj
