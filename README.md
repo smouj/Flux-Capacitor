@@ -1,39 +1,61 @@
-# ⚡ Flux Capacitor
+# Flux Capacitor
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Skill-Flux%20Capacitor-111827?style=for-the-badge&logo=github" alt="Flux Capacitor banner" />
-</p>
+## Qué es
 
-<p align="center">
-  <a href="./README.md"><img src="https://img.shields.io/badge/README-English-1f6feb?style=for-the-badge" alt="English"></a>
-  <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
-</p>
+**Flux Capacitor** es una skill especializada en **optimization** para ecosistemas multiagente (OpenClaw/KiloCode), diseñada para ejecutar tareas con seguridad, trazabilidad y resultados reproducibles.
 
-## Overview
-Token/time optimizer with pre-run estimation and adaptive cost controls.
+## Cuándo usarla
 
-## Purpose
-Optimizador de compute: predice costo tokens/tiempo antes de ejecutar chains largas, propone shortcuts y pausa si excede presupuesto.
+- Cuando la tarea pertenece al dominio de **optimization**.
+- Cuando necesitas flujo estructurado: análisis → plan → ejecución → validación.
+- Cuando necesitas reporte profesional con verificación y rollback.
 
-## Installation
-```bash
-git clone https://github.com/smouj/Flux-Capacitor.git
-cd Flux-Capacitor
-cat SKILL.md
-```
+## Qué hace
 
-## Architecture (understanding)
-```mermaid
-flowchart LR
-  A[Input] --> B[Validate scope]
-  B --> C[Plan safe steps]
-  C --> D[Execute]
-  D --> E[Verify]
-  E --> F[Report]
-```
+- Define triggers claros de activación.
+- Ejecuta proceso operativo obligatorio en 4 pasos.
+- Aplica reglas de seguridad y guardrails.
+- Entrega salida estandarizada para auditoría y operación.
 
-## Status
-Initiating
+## Inputs esperados
 
-## Difficulty
-Media-Alta
+- Objetivo técnico.
+- Alcance y restricciones.
+- Entorno objetivo (repo, VPS, servicio, etc.).
+- Riesgo/tolerancia esperada.
+
+## Outputs esperados
+
+- Plan breve y accionable.
+- Cambios realizados (si aplica).
+- Verificación reproducible.
+- Rollback y riesgo residual.
+
+## Límites y seguridad
+
+- No exponer secretos.
+- No ejecutar acciones destructivas sin confirmación explícita.
+- Evitar cambios no trazables o no verificables.
+
+## Troubleshooting
+
+1. Verificar credenciales/herramientas disponibles.
+2. Validar acceso al entorno objetivo.
+3. Reducir alcance a cambio mínimo seguro.
+4. Reintentar con evidencia y logs.
+
+## Ejemplo rápido
+
+**Input:** “Necesito revisar y endurecer el flujo de optimization”.
+
+**Output esperado:**
+- Diagnóstico inicial
+- Plan en pasos
+- Implementación incremental
+- Validación + rollback
+
+## Archivos de la skill
+
+- `SKILL.md` (EN)
+- `SKILL.es.md` (ES)
+- `README.md` (este documento)
